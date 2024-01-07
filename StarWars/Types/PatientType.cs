@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+
 using GraphQL.Types;
 
 namespace StarWars.Types;
@@ -11,7 +11,6 @@ internal class PatientType : ObjectGraphType<Patient>
         Field(h => h.Id).Description("The id of the patient.");
         Field(h => h.FirstName, nullable: true).Description("The first name of the patient.");
         Field(h => h.LastName, nullable: true).Description("The last name of the patient.");
-
+        Field(h => h.dob, nullable: true).Description("The DOB of the patient.");
     }
 }
-

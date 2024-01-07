@@ -1,4 +1,4 @@
-using System.Xml.Linq;
+
 using GraphQL.Types;
 
 namespace StarWars.Types;
@@ -17,11 +17,11 @@ public class CharacterInterface : InterfaceGraphType<StarWarsCharacter>
     }
 
 }
-public class PatientInterface : InterfaceGraphType<Patient>
+public class PatientsInterface : InterfaceGraphType<Patient>
 {
-    public PatientInterface()
+    public PatientsInterface()
     {
-        Name = "Patient";
+        Name = "Patients";
 
         Field(d => d.Id).Description("The id of the Patient.");
         Field(d => d.FirstName, nullable: true).Description("The name of the Patient.");

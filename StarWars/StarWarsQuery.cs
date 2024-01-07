@@ -37,14 +37,12 @@ public class StarWarsQuery : ObjectGraphType<object>
             ),
             resolve: async context => await data.GetPatient(context.GetArgument<string>("id"))
             );
+        FieldAsync<ListGraphType<PatientType>>(
+            "patients",
+            resolve:
+                async context => await data.Patients()
+            );
+        ;
 
     }
-    //public IQueryable<Patient> Patients()
-    //{
-    //    var data = new StarWarsData();
-    //    var pats = data.GetPatients();
-    //    return pats.AsQueryable();
-
-    //}
-
 }

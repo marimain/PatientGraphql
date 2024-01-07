@@ -95,9 +95,9 @@ public class StarWarsData
     {
         var ps = new List<Patient>()
         {
-            new Patient(){Id="100",FirstName="John",LastName="Smith"},
-            new Patient(){Id="200",FirstName="Putty",LastName="Asian"},
-            new Patient(){Id="300",FirstName="Lucy",LastName="Lao"}
+            new Patient(){Id="100",FirstName="John",LastName="Smith", dob=Convert.ToDateTime("01/02/1991")},
+            new Patient(){Id="200",FirstName="Putty",LastName="Asian", dob=Convert.ToDateTime("06/16/2012")},
+            new Patient(){Id="300",FirstName="Lucy",LastName="Lao", dob=Convert.ToDateTime("10/22/1987")}
         };
         return ps.AsQueryable();
     }

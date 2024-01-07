@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace StarWars.Types;
 
@@ -23,5 +24,6 @@ public class Patient : StarWarsCharacter
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
-    public DateTime DOB { get; set; }
+    public DateTime dob { get; set; }
 }
+

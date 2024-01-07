@@ -8,6 +8,7 @@
       https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet7/nuget/v3/index.json;
       $(RestoreAdditionalProjectSources)
     </RestoreAdditionalProjectSources>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,15 +17,16 @@
     <PackageReference Include="GraphQL.Server.Ui.Playground" Version="6.0.0" />
     <PackageReference Include="GraphQL.SystemTextJson" Version="5.1.1" />
     <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="7.0.0-*" Condition="$(PublishNativeAot) == True" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\StarWars\StarWars.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <RdXmlFile Include="Microsoft.AspNetCore.rd.xml" />
     <RdXmlFile Include="GraphQL.rd.xml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\StarWars\StarWars.csproj" />
   </ItemGroup>
 
 </Project>
